@@ -1,7 +1,7 @@
 # py
 Run python expressions as commands. Inspired by the wonderful [rb](https://github.com/thisredone/rb) project by [thisredone](https://github.com/thisredone/rb).
 
-Here's the code (sans options):
+Here's an abridged (but functional!) version of the code:
 
 ```python
 #!/usr/bin/env python3
