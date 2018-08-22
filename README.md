@@ -21,7 +21,7 @@ Here's some examples:
 
 ```sh
 # Filter lines outside a range
-seq 1 100 | ./py "_ if 50 < int(_) < 60 else None"
+seq 1 100 | py "_ if 50 < int(_) < 60 else None"
 
 # Retreive data from a CSV
 cat demodata.csv | py -f "map(lambda l: l['weekdays'], csv.DictReader(_))"
@@ -70,10 +70,10 @@ cat demodata.csv | py -f "map(lambda l: l['weekdays'], csv.DictReader(_))"
 
 **Filter lines outside a range**
 ```sh
-seq 1 100 | ./py "_ if 50 < int(_) < 60 else None"
+seq 1 100 | py "_ if 50 < int(_) < 60 else None"
 ```
 
 **Compress and output each file in the working directory**
 ```sh
-ls | ./py '"{}: {}".format(_, base64.b64encode(zlib.compress(open(_, "rb").read())).decode("ascii"))'
+ls | py '"{}: {}".format(_, base64.b64encode(zlib.compress(open(_, "rb").read())).decode("ascii"))'
 ```
