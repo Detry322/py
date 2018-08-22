@@ -2,13 +2,13 @@
 """\
 Run one-line python expressions on stdin.
 
-The expression has access to local variable _, an iterator returning lines of stdin stripped of whitespace.
+The expression has access to local variable _, containing a single line of input.
 The expression also has access to common python stdlib modules (sorted alphabetically):
 
-argparse, base64, collections, csv, gzip, json, math, os, os.path, platform, random, re, sys, time, urllib, uuid, zlib
+argparse, base64, collections, csv, glob, gzip, json, math, os, os.path, platform, random, re, sys, time, urllib, uuid, zlib
 """
 
-import argparse, base64, collections, collections.abc, csv, gzip, json, math, os, os.path, platform, random, re, sys, time, urllib, uuid, zlib
+import argparse, base64, collections, collections.abc, csv, glob, gzip, json, math, os, os.path, platform, random, re, sys, time, urllib, uuid, zlib
 
 def execute(_, expression):
     return eval(expression)
